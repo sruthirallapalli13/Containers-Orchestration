@@ -1,0 +1,16 @@
+yum install docker -y
+docker ps --- check if containr is running or not
+docker build -t imagename:tagname path --- build file
+docker image --- to check the image
+docker run -itd --name containername imagename hostport:localport --- to create container
+docker exec -it containername bash  ----- go to container
+docker stop containername
+docker ps -a    ---- to see all types of containers
+docker stop $(docker ps)---------- stop all containers at once
+docker start $(docker ps -a)--------- start all running containers
+docker rm containername --------- remove containers
+docker rm $(docker ps -a) / docker cont prune ----- remove all at once
+docker rename oldname newname
+docker build -t imagename:tag path --build-args=cloud=ibm
+dcoker rmi $(docker images) ---- remove all images at once
+
