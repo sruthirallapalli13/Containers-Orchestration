@@ -2,3 +2,13 @@ FROM mysql-server:5.7
 ENV MYSQL_ROOT_PASSWORD = admin@123
 ENV MYSQL_USER = root
 EXPOSE 3306
+
+
+------- nodejs--------
+FROM node:16
+WORKDIR /work/
+COPY package*.json /work/
+RUN npm install
+COPY . /work/
+EXPOSE 3000
+CMD ["node", "index.js"]
