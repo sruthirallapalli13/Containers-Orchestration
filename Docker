@@ -1,0 +1,13 @@
+Docker is a platform that lets you package an application and everything it needs into a light weight, portable units called conatiners.
+containers runs on the same way on any machine because they bundle code, libraries and dependencies together.
+
+Docker uses a client–server architecture:
+• 	Docker Client → You run commands like docker run
+• 	Docker Daemon (dockerd) → Builds, runs, and manages containers
+• 	Docker Registry (e.g., Docker Hub) → Stores and distributes images
+When you run a container:
+1. 	The client sends a request to the daemon
+2. 	The daemon pulls the image (if needed)
+3. 	It creates and runs the container
+
+Containers are fast because they share the host OS kernel, unlike VMs that need a full OS for each instance.
