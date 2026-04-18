@@ -1,0 +1,23 @@
+docker file ----------------- docker image ----------------conatiner
+              docker build                   docker run
+
+COMPONENTS: 
+
+       FROM: used to define base image
+       COPY: used to copy data from HOST(server) to CONTAINER
+       ADD:  used to copy data from HOST to CONTAINER and it will download the files from internet and send those files to container
+       RUN:  used to execute commands while creating an image (RUN is used to setup everything in inmage)
+                     eg: RUN apt install git -y 
+
+       CMD:  used to execute commands while creating a container. We can execute a single CMD in a docker file. (start applications)
+                     eg: CMD npm start
+                         CMD python app.py
+       ENTRYPOINT: defines the main command that will always run when a container starts.
+       EXPOSE:   used to publish port num
+       ARG:      is used to define variables for which we can't access in container (only for building image)
+       ENV:      used to define variables which can be accessed in container
+       WORKDIR:  used to set default path on a conrtainer
+       MAINTAINER: used to add author details of docker file
+       LABEL : used to add description about image
+
+       
