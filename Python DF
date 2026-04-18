@@ -1,0 +1,9 @@
+FROM python: 3.8-slim
+workdir /app
+COPY requirements.txt /app/
+RUN apt-get update -y
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . /app/
+EXPOSE 5000
+ENV flask_app=app.py
+CMD ["flask", "run", "-h", "0.0.0.0"]
